@@ -1,12 +1,21 @@
+using System.Threading.Tasks;
+using Mojang.NET.Core;
+
 namespace Mojang.NET.Authentication
 {
-    public struct Authentication
+    public class Authentication
     {
-        public Authentication(string accessToken)
+        public string AccessToken { get; private set; }
+
+        //todo: unfuck
+        public async Task<ApiResponse<Profile.Profile>> GetProfile()
         {
-            AccessToken = accessToken;
+            throw new System.NotImplementedException();
         }
 
-        public string AccessToken { get; private set; }
+        public async Task<ApiResponse<Profile.Profile>> ChangeUsername(string newUsername)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

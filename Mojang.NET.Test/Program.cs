@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using dotenv.net;
+using Mojang.NET.Authentication;
+using Mojang.NET.Common;
 
 namespace Mojang.NET.Test
 {
@@ -31,7 +34,7 @@ namespace Mojang.NET.Test
                 }
             }
 
-            var mcSoldStatsResponse = await mojangApi.GetSaleStatistics(SaleStatisticKey.MinecraftSold);
+            var mcSoldStatsResponse = await mojangApi.GetSaleStatistics(SaleStatisticsKey.MinecraftSold);
 
             if (mcSoldStatsResponse.Successful)
             {
